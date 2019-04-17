@@ -1,6 +1,9 @@
 import flask
 import time
 
+#scripts
+import start.py
+
 app = flask.Flask(__name__)
 
 @app.route('/greeting/<username>')
@@ -13,5 +16,5 @@ def version():
 
 @app.route('/main')
 def main():
-    
-    return 'executed'
+    start.do()
+    return '! ! ! START SCRIPT HAS STOPPED ! ! !'
